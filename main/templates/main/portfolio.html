@@ -4,9 +4,9 @@
 
 {% for post in posts %}
     <h3><a href="#">{{ post.title }}</a></h3>
-    <div class="shadow p-3 mb-5 bg-grey rounded">
+    <div class="shadow p-3 mb-5 bg-grey rounded text-center">
         <p>{{post.text}}</p>
-        <img src="{{ post.img.url }}">
+        <img src="{{ post.img.url }}" width="800">
     </div>
 
 {% endfor %}

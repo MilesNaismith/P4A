@@ -1,0 +1,9 @@
+*.pyc
+test_file.py
+*.log
+settings.py
+./activate/*
+./env/*
+.vscode
+bot1.py
+
