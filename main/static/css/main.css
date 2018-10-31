@@ -1,7 +1,15 @@
 .back {
-    background-color:grey;
+    background: grey url(../pic/metal-grid.jpg);
+    color: #fff;
 }
 .margin-top-bot {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navbar {
+    padding: 0rem .3rem;
+}
+.block {
+    background: white;
+    color: black;
 }

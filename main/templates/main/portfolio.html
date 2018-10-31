@@ -2,13 +2,18 @@
 
 {% block content %}
 
-{% for post in posts %}
-    <h3><a href="#">{{ post.title }}</a></h3>
-    <div class="shadow p-3 mb-5 bg-grey rounded text-center">
-        <p>{{post.text}}</p>
-        <img src="{{ post.img.url }}" width="800">
-    </div>
+    {% for post in posts %}
+        <h3 class="text-center">
+            {{ post.title }}
+        </h3>
+        <div class="margin-top-bot block rounded text-center">
+            <p class= "margin-top-bot rounded shadow p-3 mb-5 bg-light">
+                {{ post.text }}
+            </p>
+            <img src="{{ post.img.url}}" width="500">
+        </div>
 
-{% endfor %}
-
+    {% endfor %}
+<br>
+<br>
 {% endblock %}
