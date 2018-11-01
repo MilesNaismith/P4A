@@ -7,8 +7,6 @@ def home(request):
 
 def portfolio(request):
     posts = Post.objects.filter().order_by('-created_date')
-    for post in posts:
-        print(post.img.url)
     return render(request, 'main/portfolio.html', {'posts':posts})
 
 def contacts(request):
