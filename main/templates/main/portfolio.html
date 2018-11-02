@@ -1,19 +1,28 @@
 {% extends "main/base.html" %}
 
 {% block content %}
-
+<div class="accordion" id="accordionExample">
     {% for post in posts %}
-        <h3 class="text-center">
-            {{ post.title }}
-        </h3>
-        <div class="shadow p-3 mb-5 bg-grey rounded text-center">
-            <p>
-                {{ post.text }}
-            </p>
-            <img class="img-fluid" src="../..{{ post.img.url}}" >
+    <div class="card">
+        <div class="card-header rounded text-center" id="{{ post.id }}">
+            <h5 class=" mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ post.id }}" aria-expanded="false" aria-controls="collapse{{ post.id }}">
+                    <font size="4">{{ post.title}}</font>
+            </button>
+            </h5>
         </div>
-
+        <div id="collapse{{ post.id }}" class="collapse" aria-labelledby="{{ post.id }}" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="shadow p-3 mb-5 bg-grey rounded text-center">
+                    <p>
+                        {{ post.text }}
+                    </p>
+                    <img class="img-fluid" src="../..{{ post.img.url}}" >
+                </div>
+            </div>
+        </div>        
+    </div>   
     {% endfor %}
-<br>
-<br>
+</div>    
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 {% endblock %}
