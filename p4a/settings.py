@@ -25,7 +25,7 @@ SECRET_KEY = '2c&rpb+q*^!jynv63g3geo29)te15ay@)*$t)l*3^vwd%406fs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1','truskov.pythonanywhere.com',]
 
 
 # Application definition
@@ -64,6 +64,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'builtins': [
+                'main.templatetags.defaults',
+            ]
         },
     },
 ]
